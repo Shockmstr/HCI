@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundgradientblue"
+    tools:context=".seller.SellerCategoryActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="48dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="28dp"
+        android:onClick="onClickViewHistory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icons8sell96white" />
+
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Chọn mặt hàng mà bạn muốn bán"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView34" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Xin chào nguyenvana!"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+
+    <ImageView
+        android:onClick="onClickViewProfile"
+        android:id="@+id/imageView14"
+        android:layout_width="70dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/circle_border"
+        android:src="@drawable/avatar96"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="512dp"
+        android:layout_marginTop="156dp"
+        android:background="@drawable/backgroundgradientgreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="Giấy"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView37"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:text="Bạn có thể bán các mặt hàng liên quan đến giấy như: sách vở, giấy bao gói, giấy các tông, giấy báo... đã qua sử dụng, hư hỏng hoặc vẫn có thể sử dụng tiếp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+        <com.google.android.material.button.MaterialButton
+            android:onClick="onClickGoToSellDetail"
+            android:id="@+id/button10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="2"
+            android:text="Bán mặt hàng này"
+            android:textSize="14sp"
+            app:cornerRadius="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="299dp"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/round_border_white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button10">
+
+            <HorizontalScrollView
+                android:layout_width="420dp"
+                android:layout_height="177dp"
+                android:layout_marginTop="28dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.555"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView38">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:onClick="onClickSellBottle"
+                            android:layout_width="100sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.9"
+                            android:backgroundTint="@android:color/transparent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/bottle" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.1"
+                            android:text="Thuỷ tinh"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20sp"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:onClick="onClickSellElectronics"
+                            android:layout_width="100sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.9"
+                            android:backgroundTint="@android:color/transparent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ffd79f92abbe7bfa894cd1c138c2b3" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.1"
+                            android:text="Điện tử"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20sp"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:onClick="onClickSellPaper"
+                            android:layout_width="100sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.9"
+                            android:backgroundTint="@android:color/transparent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/book" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.1"
+                            android:text="Giấy"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20sp"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:onClick="onClickSellBattery"
+                            android:layout_width="100sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.9"
+                            android:backgroundTint="@android:color/transparent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/battery" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.1"
+                            android:text="Pin"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20sp"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:onClick="onClickSellMetal"
+                            android:layout_width="100sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.9"
+                            android:backgroundTint="@android:color/transparent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/metal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.1"
+                            android:text="Phế liệu"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20sp"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:onClick="onClickSellMisc"
+                            android:layout_width="100sp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.9"
+                            android:backgroundTint="@android:color/transparent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/miscellaneous" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.1"
+                            android:text="Các loại khác"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/textView38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="28dp"
+                android:text="Chọn loại mặt hàng"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
